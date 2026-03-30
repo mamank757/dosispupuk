@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>My App - King Mamank</title>
+    <style>
+        /* Menghilangkan semua spasi bawaan browser */
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            height: 100%; 
+            width: 100%;
+            overflow: hidden; /* Mencegah scroll ganda */
+            background-color: #ffffff;
+        }
+
+        /* Membuat iframe memenuhi seluruh layar aplikasi */
+        iframe { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+            z-index: 1;
+        }
+
+        /* TOMBOL HOME MELAYANG */
+        .btn-home {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #27ae60;
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 9999; /* Pastikan di atas iframe */
+            border: 2px solid white;
+            transition: transform 0.2s, background 0.2s;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .btn-home:active {
+            transform: scale(0.9);
+            background: #1e8449;
+        }
+
+        /* Efek pulse halus agar tombol terlihat interaktif */
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(39, 174, 96, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(39, 174, 96, 0); }
+        }
+        .btn-home {
+            animation: pulse-green 2s infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://mamank757.github.io/petani" class="btn-home" title="Kembali ke Dashboard">🏠</a>
+
+    <iframe src="https://script.google.com/macros/s/AKfycbzsx9osMY8lU8GKewA3k7z0YBwPkrQB8sk71HaLVdctLzR1qDJIlHHcIbgbm9fpn8uh/exec"></iframe>
+
+</body>
+</html>
